@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mid {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.counterWrapper {
+
+    text-align: center;
+    margin: 60px auto;
+
+    .input {
+
+
+        input#cdate {
+            border: 1px solid orange;
+            padding: 10px 10px;
+            width: 220px;
+        }
+
+        input#ctime {
+            width: 130px;
+            padding: 10px 10px;
+            border: 1px solid orange;
+        }
+
+        button#obtn {
+            border: 1px solid orange;
+            padding: 12px 17px;
+            cursor: pointer;
+        }
+
+        button#pbtn {
+            @extend  button#obtn;
+        }
+
+    }
+
+
+}
