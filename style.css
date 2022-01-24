@@ -5,31 +5,7 @@
           box-sizing: border-box;
 }
 
-.mid {
-  max-width: 1000px;
-  margin: auto;
-}
-
-.counterWrapper {
-  text-align: center;
-  margin: 60px auto;
-}
-
-.counterWrapper .input input#cdate {
-  border: 1px solid orange;
-  padding: 10px 10px;
-  width: 220px;
-}
-
-.counterWrapper .input input#ctime {
-  width: 130px;
-  padding: 10px 10px;
-  border: 1px solid orange;
-}
-
-.counterWrapper .input button#obtn, .counterWrapper .input button#pbtn {
-  border: 1px solid orange;
-  padding: 12px 17px;
-  cursor: pointer;
+body {
+  background-color: gray;
 }
 /*# sourceMappingURL=style.css.map */
