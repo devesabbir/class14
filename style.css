@@ -9,3 +9,37 @@ body {
   background-color: gray;
 }
 /*# sourceMappingURL=style.css.map */
+
+.overline{
+   text-decoration: line-through;
+}
+.card {
+  overflow: hidden;
+}
+
+img.card-img {
+  height: 111px;
+  object-fit: contain;
+  transition: .4s;
+}
+
+
+img.card-img:hover{
+  object-fit: cover;
+  transform: scale(1.4) rotate(3deg);
+  transition: .4s;
+}
+
+section.developer {
+  padding-top: 30px;
+}
+
+div#pro-container {
+  height: 342px;
+  overflow: auto;
+}
+
+div#devsout {
+  height: 377px;
+  overflow: auto;
+}

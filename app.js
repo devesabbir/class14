@@ -84,13 +84,13 @@ function set_pro(){
       innerpro += `
       <div class="col-lg-4 my-2">
            <div class="card p-3">
-              <img class="card-img" src= "${data.link}" alt="">
+            <a href="${data.link}"> <img class="card-img" src= "${data.link}" alt=""></a>
 
                <div class="card-body">
                  <h5>${data.name}</h5>
-               <p><span>Price:</span><span>${data.price}</span></p>
-               <p><span>Sale Price:</span><span>${data.sale_price}</span></p>
-               <p><span>Stock:</span><span>${data.select}</span></p>
+               <p class="mb-0"><span>Price:</span> <span class="${((data.price > data.sale_price)) ? 'overline' : ''}">${data.price}</span></p>
+               <p class="mb-0"><span>Sale Price:</span><span>${data.sale_price}</span></p>
+               <p class="mb-0"><span>Stock:</span> <span>${data.select}</span></p>
              </div>
 
            <div class="card-bottom text-center">
@@ -109,14 +109,75 @@ function set_pro(){
 }
 
 
+//Developer Data 
+
+const dev_form = document.querySelector('#dev-form')
+const devsout = document.querySelector('#devsout')
+
+dev_form.addEventListener('submit', function(event){
+    event.preventDefault();
+    let name = this.querySelector('input[name="name"]').value
+    let img = this.querySelector('input[name="img"]').value
+    let skill = this.querySelectorAll('input[type="checkbox"]:checked')
+   
+    let skil_arr = []
+    for (let i = 0; i < skill.length; i++) {
+      skil_arr.push(skill[i].value)   
+    }
+
+    let dev_arr = []
+     
+    if(JSON.parse(localStorage.getItem('deve'))){
+       dev_arr = JSON.parse(localStorage.getItem('deve'))
+    }else{
+       dev_arr = []
+    }
+
+    dev_arr.push({
+         Name  : name,
+         Img : img,
+         Skill : skil_arr,
+    })
+
+    localStorage.setItem('deve', JSON.stringify(dev_arr))
+    
+    deve_show()
+
+})
+
+deve_show()
+function deve_show(){
+    let get_dev = JSON.parse(localStorage.getItem('deve'))
+    let print = ''
+    get_dev.map ( data => {
+            let listSkil = ''
+         data.Skill.map( d => {
+            listSkil += `
+                      <span>${d}</span>
+             `
+         })
+
+         print += `
+            
+               <div class="col-lg-4 my-2">
+               <div class="card p-3">
+                  <img class="card-img" src= "${data.Img}" alt="">
+    
+                   <div class="card-body">
+                     <h5>${data.Name}</h5>
+                     <p>${listSkil}</p>
+                 </div>
+      
+        </div>
+    </div>
+         
+         `
+    })
 
 
+    devsout.innerHTML = print
 
-
-
-
-
-
-
+    
+}
 
 
