@@ -69,4 +69,17 @@ div#devsout {
   overflow: auto;
 }
 
+
+.card-body ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.card-body ul li {
+  flex-grow: 1;
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */

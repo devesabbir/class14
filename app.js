@@ -4,7 +4,7 @@ const age_output = document.querySelector('.age_output')
 
 //Age Form Submision
 ageForm.addEventListener('submit', function(e){
-     e.preventDefault()
+     e.preventDefault();
      let btd = this.querySelector('input[type="date"]').value
      let name = this.querySelector('input[type="text"]').value
      let gender = this.querySelector('input[name="gender"]:checked')
@@ -46,7 +46,7 @@ const pro_form = document.querySelector('#product_form')
 const pro_container = document.querySelector('#pro-container')
 
 pro_form.addEventListener('submit', function(e){
-    e.preventDefault()
+      e.preventDefault();
     let name = this.querySelector('input[name="name"]').value
     let link = this.querySelector('input[name="link"]').value
     let price = this.querySelector('input[name="price"]').value
@@ -155,7 +155,7 @@ deve_show()
 function deve_show(){
     let get_dev = JSON.parse(localStorage.getItem('deve'))
     let print = ''
-    get_dev.map ( data => {
+    get_dev.map( data => {
             let listSkil = ''
          data.Skill.map( d => {
             listSkil += `
@@ -173,9 +173,9 @@ function deve_show(){
                      <h5>${data.Name}</h5>
                      <p>${listSkil}</p>
                      <ul>
-                        <li><a href="${data.fb}">Facebook</a></li>
-                        <li><a href="${data.twiter}">Facebook</a></li>
-                        <li><a href="${data.linkd}">Facebook</a></li>
+                        <li><a href="${data.fb}"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="${data.twiter}"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="${data.linkd}"><i class="fab fa-linkedin"></i></a></li>
                      </ul>
                  </div>
       
