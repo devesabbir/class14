@@ -8,6 +8,33 @@
 body {
   background-color: gray;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+}
+
+.card-body ul {
+  list-style: none;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+}
 /*# sourceMappingURL=style.css.map */
 
 .overline{
@@ -30,9 +57,7 @@ img.card-img:hover{
   transition: .4s;
 }
 
-section.developer {
-  padding-top: 30px;
-}
+
 
 div#pro-container {
   height: 342px;
@@ -43,3 +68,5 @@ div#devsout {
   height: 377px;
   overflow: auto;
 }
+
+/*# sourceMappingURL=style.css.map */

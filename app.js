@@ -118,6 +118,9 @@ dev_form.addEventListener('submit', function(event){
     event.preventDefault();
     let name = this.querySelector('input[name="name"]').value
     let img = this.querySelector('input[name="img"]').value
+    let fb = this.querySelector('input[name="fb"]').value
+    let twt = this.querySelector('input[name="twt"]').value
+    let linkd = this.querySelector('input[name="linkd"]').value
     let skill = this.querySelectorAll('input[type="checkbox"]:checked')
    
     let skil_arr = []
@@ -137,6 +140,9 @@ dev_form.addEventListener('submit', function(event){
          Name  : name,
          Img : img,
          Skill : skil_arr,
+         fb : fb,
+         twiter: twt,
+         linkd: linkd,
     })
 
     localStorage.setItem('deve', JSON.stringify(dev_arr))
@@ -166,6 +172,11 @@ function deve_show(){
                    <div class="card-body">
                      <h5>${data.Name}</h5>
                      <p>${listSkil}</p>
+                     <ul>
+                        <li><a href="${data.fb}">Facebook</a></li>
+                        <li><a href="${data.twiter}">Facebook</a></li>
+                        <li><a href="${data.linkd}">Facebook</a></li>
+                     </ul>
                  </div>
       
         </div>
@@ -176,8 +187,5 @@ function deve_show(){
 
 
     devsout.innerHTML = print
-
     
 }
-
-
