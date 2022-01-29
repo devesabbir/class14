@@ -33,7 +33,8 @@ body {
 }
 
 body {
-  background-color: gray;
+  background: rgb(82,207,237);
+  background: linear-gradient(352deg, rgba(82,207,237,1) 5%, rgba(71,142,255,1) 100%);
 }
 /*# sourceMappingURL=style.css.map */
 
